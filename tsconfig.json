@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
+    "incremental": true,
     "strict": true,
-    "module": "ES2020",
-    "target": "ES2020",
-    // Doesn't apply to server/, see ts-node config down below and server/tsconfig.json
-    "moduleResolution": "Bundler",
+    "module": "NodeNext",
+    "target": "ESNext",
+    "moduleResolution": "NodeNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client"],
     "jsx": "react-jsx",
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "#*": ["./src/*"]
+    },
+    "outDir": "dist/node"
   },
   "ts-node": {
     "transpileOnly": true,

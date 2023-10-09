@@ -1,8 +1,4 @@
-import './code.css'
-
-export { Page }
-
-function Page() {
+export function Page () {
   return (
     <>
       <h1>About</h1>
