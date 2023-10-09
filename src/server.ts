@@ -20,7 +20,7 @@ async function startServer () {
 
   if (isProduction) {
     await app.register(import('@fastify/static'), {
-      prefix: '/assets/',
+      wildcard: false,
       root: `${Root.path}/dist/client`,
     })
   } else {
